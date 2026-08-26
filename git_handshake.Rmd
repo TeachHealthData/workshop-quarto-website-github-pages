@@ -1,0 +1,52 @@
+---
+title: "git_handshake"
+output: html_document
+---
+In this markdown file we will:
+1. create a github token (a temporary secret) which allows RStudio interact with your github account.
+2. connect that newly acquired token to your Rstudio
+3. commit some changes to your github repo to check if the token works
+
+## 1. First let's a create token.
+
+This will open a github website. Give your token a name, like "Natasha Rstudio Github" and confirm, you will be allowed to copy-paste that token. Copy paste the token (it is a string of about 30 characters) and come back here.
+
+```{r}
+# install.packages("usethis") 
+#you likely already have 'usethis' library. But if you see an error like "I don't know what you mean by 'usethis'" then un-comment line above and run again.
+
+library(usethis)
+usethis::create_github_token() # this will open a website in a browser tab.
+```
+
+## 2. Allow Rstudio to use the token
+
+We will now share the Token with RStudio, so it can store it in a place where it keeps secrets. For that we will keep using the usethis library.
+```{r}
+gitcreds::gitcreds_delete() # this (in console) will ask you something. Choose option 2
+gitcreds::gitcreds_set() # this (in console) will ask you to Paste the token you Copied from github.
+```
+
+## 3. Let's test if it worked
+
+Now we will check if token got properly saved and if you have 'Write' access to github. This means you can not only read public repositories, but now you can  read&write to public&private repositories.
+
+```{r}
+gitcreds::gitcreds_get(use_cache = FALSE) # this will either complaint, or show your credentials.
+```
+
+## 4. What's next. How to make changes to an online github repository:
+
+If you did not see an error above means you are connected to your github account on this installation of RStudio (this laptop or this server). When you will be in an RProject which is a code repository, you will see a new tab called 'Git' next to the 'Environment' on top right, with various Git options.
+
+In short:
+- change some file in your project, that file will show up in git tab. Only files which got changed or added show up here.
+- tick a box next to the file you changed, and select 'commit'. You will be asked to write a short "commit message" which explains what you did. e.g. "fixed a typo in my name". Click "Commit". These changes are still only on your computer.
+- now you are ready to send those changes to the online github repository on the internet. To do that select "Push" or click green arrow up. You can now close any popups.
+- your changes should be online, you can go to your repository's website, and you should see them there.
+
+
+## 5. Some cleanup
+```{r}
+usethis::git_default_branch_configure()
+```
