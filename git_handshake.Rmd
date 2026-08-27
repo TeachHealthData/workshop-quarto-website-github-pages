@@ -2,12 +2,13 @@
 title: "git_handshake"
 output: html_document
 ---
+
 In this markdown file we will:
 1. create a github token (a temporary secret) which allows RStudio interact with your github account.
 2. connect that newly acquired token to your Rstudio
 3. check if the token works
 
-## 1. First let's a create token.
+## 1. First let's a create a token.
 
 - This will open a github website on a 'new token' form
 - Give your token a name, like "Natasha Rstudio Github"
@@ -17,22 +18,23 @@ In this markdown file we will:
 
 ```{r}
 # install.packages("usethis") 
-# you likely already have 'usethis' library installer. But if you see an error like "I don't know what you mean by 'usethis'" then un-comment line above and run again.
+# you likely already have 'usethis' library installed. But you can un-comment the line above and run again, if you see an error like:
+# Error in library(usethis) : there is no package called ‘usethis’ 
 
 library(usethis)
 
-usethis::git_default_branch_configure(name = "main") #this will do some cleabup first
+usethis::git_default_branch_configure(name = "main") # this will do some cleabup first
 
 usethis::create_github_token() # this will open a website in a browser tab.
 ```
 
-## 2. Allow Rstudio to use the token
+## 2. Allow RStudio to use the token
 
 - We will now share the Token with RStudio, so it can store it in a place where it keeps secrets
 - For that we will keep using the usethis library.
 - Look in the 'Console' tab on the bottom left. You will be asked a question there.
 - if you already had a token, you have AN OPTION to delete and replace it. To do that pick option 2 ('Replace')
-- if you never had a token, you will just be asked to paste the long sting you copied from github page above. It will look like this "ghp_oxjeoiduh23i8ry3498fh2Q"
+- if you never had a token, you will just be asked to paste the long string you copied from github page above. It will look like this "ghp_oxjeoiduh23i8ry3498fh2Q"
 
 ```{r}
 gitcreds::gitcreds_set() # this (in console) will ask you to Paste the token you Copied from github.
@@ -41,16 +43,16 @@ gitcreds::gitcreds_set() # this (in console) will ask you to Paste the token you
 ## 3. Let's test if it worked
 
 - Now we will check if token got properly saved and if you have 'Write' access to github.
-- This means you can nopw read & write to your public & private repositories.
+- This means you can now read & write to your public & private repositories.
 - you will know if it worked if you see <gitcreds>.... but if you see an Error, something went wrong.
 
 ```{r}
-gitcreds::gitcreds_get(use_cache = FALSE) # this will either complaint, or show your credentials.
+gitcreds::gitcreds_get(use_cache = FALSE) # this will either complain, or show your credentials.
 ```
 
-## 4. What's next. How to make changes to an online github repository:
+## 4. What's next? How to make changes to an online github repository:
 
-If you did not see an error above means you are connected to your github account on this installation of RStudio (this laptop or this server). When you will be in an RProject which is a code repository, you will see a new tab called 'Git' next to the 'Environment' on top right, with various Git options.
+If you did not see an error above it means you are connected to your github account on this installation of RStudio (this laptop or this server). When you will be in an RProject which is also a code repository, you will see a new tab called 'Git' next to the 'Environment' on top right, with various Git options.
 
 In short:
 - change some file in your project, that file will show up in git tab. Only files which got changed or added show up here.
