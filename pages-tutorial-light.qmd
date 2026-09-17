@@ -1,0 +1,154 @@
+---
+title: 'GitHub pages Portfolio setup'
+format:
+  revealjs:
+    menu: false
+    scrollable: true
+---
+
+
+## Copy the template
+
+Find the Template repo for creating skills/experience portfolio at:
+
+<https://github.com/TeachHealthData/workshop-portfolio-template>
+
+Find and click the green "Use this template" button (somewhere top-right?)
+
+![](images/use-template.png)
+
+## Name the repo
+
+You will be asked to name your repository  
+The name you choose will form the URL for your website
+
+- Name it meaningfully
+- And professionally!
+
+:::{.r-stack}
+![](images/naming-website-repo.png){.fragment left=0 width=1000}
+
+![](images/naming-website-repo-annotated.png){.fragment left=0 width=1000}
+:::
+
+
+## Create your repo
+
+Hit the green "Create repository" button (bottom)
+
+![](images/create-repo.png){fig-align='center'}
+
+## Deploying your site
+
+:::{.columns}
+:::{.column}
+Click "Settings" in the top nav-bar 
+
+Click "Pages" in the left side bar 
+:::
+
+:::{.column}
+![](images/settings-menu.png)
+
+![](images/pages-sidebar-link.png)
+:::
+:::
+
+## Actions
+
+Under "Build and deployment" click "GitHub Actions"
+
+:::{.r-stack}
+![](images/deployment-options-branch.png){.fragment}
+
+![](images/deployment-options-actions.png){.fragment}
+:::
+
+## Update our site (1)
+
+The __next time we change our content__ github will automatically run the instructions in `/.github/workflows/`
+
+To make an update here on github, Click on the `<> Code` tab
+
+![](images/navbar-code-tab.png)
+
+
+## Update our site (2)
+
+:::{.columns}
+:::{.column}
+- Click the file `about.qmd`
+:::
+
+:::{.column}
+![](images/select-about-file.png)
+:::
+:::
+
+## Update our site (3)
+
+- Click the pencil icon (top right)
+
+![](images/edit-about.png)
+
+- Add some change
+
+![](images/commit-about-changes.png)
+
+- And click the green commit button (top right)
+- Add a commit message, and click "Commit changes" (bottom right)
+
+![](images/finish-commit.png)
+
+## Return to main page
+
+Click the `<Code>` button in the main nav-bar
+
+![](images/navbar-code-tab.png)
+
+
+- You should now see a wee yellow dot...
+    - (if not, it may just be that the page has not updated)
+
+![](images/yellow-dot.png)
+
+- If it is there, you can click on it...
+
+:::{.r-stack}
+![](images/pending-check-1.png){.fragment}
+
+![](images/pending-check-2.png){.fragment}
+
+![](images/successful-checks.png){.fragment}
+:::
+
+- You can click the Actions tab in the main nav bar to see the actual progress of task as it updates.
+- Just wait for GitHub to do its thing in the background
+    - will take a couple of minutes (it should change to a green tick, but might not 🤷)
+
+## While we wait...
+
+Click the cog in the about section (top right)
+
+![](images/about-cog.png)
+
+Give a short description and tick the box as shown
+
+![](images/use-pages-url2.png)
+
+You should now see your website url under the cog you clicked in the about section
+
+
+## Linking with RStudio
+
+![](images/new-proj-vc.png)
+
+## 
+
+![](images/clone-from-git.png)
+
+##
+
+![](images/clone-from-git-url.png)
+
+
