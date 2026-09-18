@@ -1,10 +1,32 @@
+
 ---
 title: 'GitHub pages Portfolio setup'
 format:
   revealjs:
     menu: false
-    scrollable: true
+    buttons: false
+    auto-stretch: false
+    css: style.css
 ---
+
+## Before we start
+
+- GitHub account
+- R + RStudio installed
+
+
+## Plan for today
+
+- Create a repo from a __template__
+- Configure __automatic deployment__
+- Make your first edit to __trigger a build__
+- Copy locally 
+- Push local changes to trigger another build
+
+
+## Create repo {.section-intro}
+
+![](images/GitHub_Invertocat_White.png){width=45% fig-align='center'}
 
 
 ## Copy the template
@@ -13,142 +35,283 @@ Find the Template repo for creating skills/experience portfolio at:
 
 <https://github.com/TeachHealthData/workshop-portfolio-template>
 
-Find and click the green "Use this template" button (somewhere top-right?)
+![](images/new-repo-from-template.png)
 
-![](images/use-template.png)
+Find and click the green "Use this template" button
 
-## Name the repo
 
-You will be asked to name your repository  
-The name you choose will form the URL for your website
+## Name your repo 
 
-- Name it meaningfully
-- And professionally!
+- The name you choose will be your final website URL  
+
+:::{.highlight-tip}
+[your-username.github.io/[repo-name]{style='color: green; font-weight: bold;'}]{style='font-family: monospace;'}
+:::
+
+- So choose something appropriately professional
 
 :::{.r-stack}
-![](images/naming-website-repo.png){.fragment left=0 width=1000}
+![](images/name-repo-1.png){.fragment}
 
-![](images/naming-website-repo-annotated.png){.fragment left=0 width=1000}
+![](images/name-repo-2.png){.fragment}
 :::
 
 
-## Create your repo
+## Make it public
 
-Hit the green "Create repository" button (bottom)
+- Don't hide your skills!
 
-![](images/create-repo.png){fig-align='center'}
+![](images/make-public.png)
 
-## Deploying your site
 
-:::{.columns}
-:::{.column}
-Click "Settings" in the top nav-bar 
+## Don't delegate this to AI
 
-Click "Pages" in the left side bar 
+:::{.highlight-tip}
+May break stuff!
 :::
 
-:::{.column}
-![](images/settings-menu.png)
+![](images/skip-copilot.png)
 
-![](images/pages-sidebar-link.png)
+Copilot may add extra files that interfere with the automated build process
+
+
+## Now we create the repo
+
+- Big green button
+
+![](images/create-repo-btn.png)
+
+:::{.fragment .highlight-success}
+You now have your own website repository 👏
 :::
+
+
+## What's in the template?
+
+- `.qmd` files — your pages, written in Markdown
+- `_quarto.yml` — site configuration
+- `.github/workflows/` — the Actions workflow that builds and publishes your site
+
+:::{.highlight-tip}
+GitHub Actions will handle everything automatically on every push
 :::
 
-## Actions
 
-Under "Build and deployment" click "GitHub Actions"
+## Prepare for deployment {.section-intro}
+
+
+## Change `Pages` settings {.scrollable}
+
+Find the `Settings` tab in the main nav bar
 
 :::{.r-stack}
-![](images/deployment-options-branch.png){.fragment}
+![](images/navbar.png){.fragment}
 
-![](images/deployment-options-actions.png){.fragment}
+![](images/navbar-settings.png){.fragment}
 :::
 
-## Update our site (1)
+:::{.columns .fragment}
+:::{.column}
+Now scan down the sidebar till you see `Pages`
+:::
 
-The __next time we change our content__ github will automatically run the instructions in `/.github/workflows/`
+:::{.column}
+![](images/sidebar-pages.png)
+:::
+:::
 
-To make an update here on github, Click on the `<> Code` tab
 
-![](images/navbar-code-tab.png)
+## Deploy with GitHub Actions
 
-
-## Update our site (2)
+After completing this step, your website deployment will be configured
 
 :::{.columns}
+:::{.column .fragment width='40%'}
+
+- This is the default
+
+![](images/deploy-from-branch.png)
+:::
+
+:::{.fragment}
+
+
+:::{.column width='40%'}
+
+- Automated build
+
+![](images/deploy-from-actions.png)
+:::
+:::
+:::
+
+
+## Make changes {.section-intro}
+
+
+## Where's our website...?
+
+In order to __trigger__ the `Build Actions` we have to make a change to our content
+
+Let's update our `About` page
+
+![](images/about-select.png)
+
+
+## Edit and commit
+
+:::{.r-stack}
+![](images/about-edit.png){.fragment}
+
+![](images/about-change-and-commit.png){.fragment}
+
+![](images/about-commit-message.png){.fragment}
+:::
+
+:::{.fragment .highlight-success}
+Commit -> Automatic build process triggered 🙌
+:::
+
+
+## GitHub Magic {.section-intro}
+
+![](images/actions-workflow.png){width='80%' fig-align=center}
+
+## To see the magic
+
+Return to `main` page
+
+![](images/navbar-code.png)
+
+:::{.columns .fragment}
 :::{.column}
-- Click the file `about.qmd`
+And notice the wee yellow dot
 :::
 
 :::{.column}
-![](images/select-about-file.png)
-:::
-:::
-
-## Update our site (3)
-
-- Click the pencil icon (top right)
-
-![](images/edit-about.png)
-
-- Add some change
-
-![](images/commit-about-changes.png)
-
-- And click the green commit button (top right)
-- Add a commit message, and click "Commit changes" (bottom right)
-
-![](images/finish-commit.png)
-
-## Return to main page
-
-Click the `<Code>` button in the main nav-bar
-
-![](images/navbar-code-tab.png)
-
-
-- You should now see a wee yellow dot...
-    - (if not, it may just be that the page has not updated)
-
 ![](images/yellow-dot.png)
-
-- If it is there, you can click on it...
-
-:::{.r-stack}
-![](images/pending-check-1.png){.fragment}
-
-![](images/pending-check-2.png){.fragment}
-
-![](images/successful-checks.png){.fragment}
+:::
 :::
 
-- You can click the Actions tab in the main nav bar to see the actual progress of task as it updates.
-- Just wait for GitHub to do its thing in the background
-    - will take a couple of minutes (it should change to a green tick, but might not 🤷)
+:::{.columns .fragment}
+:::{.column}
+You can click it...
+:::
 
-## While we wait...
+:::{.column}
+:::{.r-stack}
+![](images/checks-pending-1.png)
 
-Click the cog in the about section (top right)
+![](images/checks-pending-2.png){.fragment}
 
-![](images/about-cog.png)
+![](images/checks-success.png){.fragment}
+:::
+:::
+:::
 
-Give a short description and tick the box as shown
-
-![](images/use-pages-url2.png)
-
-You should now see your website url under the cog you clicked in the about section
+:::{.fragment .highlight-success}
+You now have a website!! 🎉
+:::
 
 
-## Linking with RStudio
+## Find your URL
 
-![](images/new-proj-vc.png)
+- Once the Action is complete you will have a website
+- But where is it?
 
-## 
+:::{.columns}
+:::{.column .fragment}
+Right hand side
 
-![](images/clone-from-git.png)
+![](images/about-description-cog.png)
+:::
 
-##
+:::{.column .fragment}
+![](images/about-description-url.png)
+:::
+:::
 
-![](images/clone-from-git-url.png)
+:::{.fragment .highlight-tip}
+Bookmark this — it's your portfolio URL to share
+:::
+
+
+## New project {.section-intro}
+
+:::{div}
+![](images/rslogo.png){width=80% fig-align="center"}
+:::
+
+
+## Create with Git enabled
+
+- We can create a new project directly from a Git repo
+
+:::{.columns}
+:::{.column .fragment}
+
+- Choose __Create Project__ from __Version Control__
+
+![](images/rstudio-proj-vc.png)
+:::
+
+:::{.column .fragment}
+
+- Select the Git option
+</br>
+</br>
+
+![](images/rstudio-proj-git.png)
+:::
+:::
+
+
+## Add `clone` url
+
+Copy your repo's URL form your browser address bar
+
+:::{.r-stack}
+![](images/repo-url.png)
+
+![](images/rstudio-repo-url-1.png){.fragment}
+
+![](images/rstudio-repo-url-2.png){.fragment}
+:::
+
+
+## Make changes locally {.section-intro}
+
+
+## Edit your About page
+
+![](images/rstudio-change-about.png)
+
+
+## Commit and push 
+
+:::{.r-stack}
+![](images/rstudio-commit-changes-1.png){.fragment}
+
+![](images/rstudio-commit-changes-2.png){.fragment}
+
+![](images/rstudio-push.png){.fragment}
+:::
+
+:::{.fragment .highlight-success}
+When you click `Push` the "Build Pages" action is triggered 🎊
+:::
+
+
+## Go check it out...
+
+- A live portfolio website at `your-username.github.io/repo-name`
+- Automatic rebuilds on every push
+- A local development workflow in RStudio
+
+Go back to GitHub, and click the link you configured earlier
+
+:::{.highlight-tip}
+Give it a minute - the Action may still be running
+:::
 
 
