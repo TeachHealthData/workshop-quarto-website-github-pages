@@ -3,9 +3,11 @@ title: 'GitHub pages Portfolio setup'
 format:
   revealjs:
     menu: false
+    buttons: false
     scrollable: true
 ---
 
+## Create repo 
 
 ## Copy the template
 
@@ -13,142 +15,134 @@ Find the Template repo for creating skills/experience portfolio at:
 
 <https://github.com/TeachHealthData/workshop-portfolio-template>
 
+![](images/new-repo-from-template.png)
+
 Find and click the green "Use this template" button (somewhere top-right?)
 
-![](images/use-template.png)
-
-## Name the repo
-
-You will be asked to name your repository  
-The name you choose will form the URL for your website
-
-- Name it meaningfully
-- And professionally!
+## Name your repo 
 
 :::{.r-stack}
-![](images/naming-website-repo.png){.fragment left=0 width=1000}
+![](images/name-repo-1.png){.fragment}
 
-![](images/naming-website-repo-annotated.png){.fragment left=0 width=1000}
+![](images/name-repo-2.png){.fragment}
 :::
 
+## Make it public
 
-## Create your repo
+- Don't hide your skills!
 
-Hit the green "Create repository" button (bottom)
+![](images/make-public.png)
 
-![](images/create-repo.png){fig-align='center'}
+## Don't delegate this to AI
 
-## Deploying your site
+- Also, may break stuff!
 
-:::{.columns}
-:::{.column}
-Click "Settings" in the top nav-bar 
+![](images/skip-copilot.png)
 
-Click "Pages" in the left side bar 
-:::
+## Now we create the repo
 
-:::{.column}
-![](images/settings-menu.png)
+- Big green button
 
-![](images/pages-sidebar-link.png)
-:::
-:::
+![](images/create-repo-btn.png)
 
-## Actions
 
-Under "Build and deployment" click "GitHub Actions"
+## Prepare for deployment
+
+## Nav bar...
 
 :::{.r-stack}
-![](images/deployment-options-branch.png){.fragment}
+![](images/navbar.png){.fragment}
 
-![](images/deployment-options-actions.png){.fragment}
+![](images/navbar-settings.png){.fragment}
 :::
 
-## Update our site (1)
+## Change `Pages` settings
 
-The __next time we change our content__ github will automatically run the instructions in `/.github/workflows/`
+![](images/sidebar-pages.png)
 
-To make an update here on github, Click on the `<> Code` tab
+## Deploy with GitHub Actions
 
-![](images/navbar-code-tab.png)
-
-
-## Update our site (2)
+After completing this step, your website deployment will be configured
 
 :::{.columns}
-:::{.column}
-- Click the file `about.qmd`
+:::{.column .fragment}
+
+- We have another workshop that shows this...
+
+![](images/deploy-from-branch.png)
 :::
 
-:::{.column}
-![](images/select-about-file.png)
+:::{.column .fragment}
+
+- But the better approach is this...
+
+![](images/deploy-from-actions.png)
 :::
 :::
 
-## Update our site (3)
 
-- Click the pencil icon (top right)
+## Make changes
 
-![](images/edit-about.png)
+## Where's our website...?
 
-- Add some change
+In order to trigger the `Build Actions` we have to make a change
 
-![](images/commit-about-changes.png)
+Let's update our About page
 
-- And click the green commit button (top right)
-- Add a commit message, and click "Commit changes" (bottom right)
+![](images/about-select.png)
 
-![](images/finish-commit.png)
+## Edit and commit
 
-## Return to main page
+:::{.r-stack}
+![](images/about-edit.png){.fragment}
 
-Click the `<Code>` button in the main nav-bar
+![](images/about-change-and-commit.png){.fragment}
 
-![](images/navbar-code-tab.png)
+![](images/about-commit-message.png){.fragment}
+:::
 
+:::{.fragment}
+Once you press commit, the action will be triggered
+:::
 
-- You should now see a wee yellow dot...
-    - (if not, it may just be that the page has not updated)
+## GitHub Magic
+
+## To see the magic
+
+Return to main page
+
+![](images/navbar-code.png)
+
+And notice the wee yellow dot
 
 ![](images/yellow-dot.png)
 
-- If it is there, you can click on it...
+You can click it (if you like)
 
 :::{.r-stack}
-![](images/pending-check-1.png){.fragment}
+![](images/checks-pending-1.png){.fragment}
 
-![](images/pending-check-2.png){.fragment}
+![](images/checks-pending-2.png){.fragment}
 
-![](images/successful-checks.png){.fragment}
+![](images/checks-success.png){.fragment}
 :::
 
-- You can click the Actions tab in the main nav bar to see the actual progress of task as it updates.
-- Just wait for GitHub to do its thing in the background
-    - will take a couple of minutes (it should change to a green tick, but might not 🤷)
+You now have a website!!
 
-## While we wait...
+## Find your URL
 
-Click the cog in the about section (top right)
+:::{.columns}
+:::{.column .fragment}
+![](images/about-description-cog.png)
+:::
 
-![](images/about-cog.png)
+:::{.column .fragment}
+![](images/about-description-url.png)
+:::
+:::
 
-Give a short description and tick the box as shown
+# RStudio project
 
-![](images/use-pages-url2.png)
-
-You should now see your website url under the cog you clicked in the about section
-
-
-## Linking with RStudio
-
-![](images/new-proj-vc.png)
-
-## 
-
-![](images/clone-from-git.png)
-
-##
-
-![](images/clone-from-git-url.png)
+# Make changes locally
 
 
