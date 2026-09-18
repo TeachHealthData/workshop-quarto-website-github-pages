@@ -1,0 +1,148 @@
+---
+title: 'GitHub pages Portfolio setup'
+format:
+  revealjs:
+    menu: false
+    buttons: false
+    scrollable: true
+---
+
+## Create repo 
+
+## Copy the template
+
+Find the Template repo for creating skills/experience portfolio at:
+
+<https://github.com/TeachHealthData/workshop-portfolio-template>
+
+![](images/new-repo-from-template.png)
+
+Find and click the green "Use this template" button (somewhere top-right?)
+
+## Name your repo 
+
+:::{.r-stack}
+![](images/name-repo-1.png){.fragment}
+
+![](images/name-repo-2.png){.fragment}
+:::
+
+## Make it public
+
+- Don't hide your skills!
+
+![](images/make-public.png)
+
+## Don't delegate this to AI
+
+- Also, may break stuff!
+
+![](images/skip-copilot.png)
+
+## Now we create the repo
+
+- Big green button
+
+![](images/create-repo-btn.png)
+
+
+## Prepare for deployment
+
+## Nav bar...
+
+:::{.r-stack}
+![](images/navbar.png){.fragment}
+
+![](images/navbar-settings.png){.fragment}
+:::
+
+## Change `Pages` settings
+
+![](images/sidebar-pages.png)
+
+## Deploy with GitHub Actions
+
+After completing this step, your website deployment will be configured
+
+:::{.columns}
+:::{.column .fragment}
+
+- We have another workshop that shows this...
+
+![](images/deploy-from-branch.png)
+:::
+
+:::{.column .fragment}
+
+- But the better approach is this...
+
+![](images/deploy-from-actions.png)
+:::
+:::
+
+
+## Make changes
+
+## Where's our website...?
+
+In order to trigger the `Build Actions` we have to make a change
+
+Let's update our About page
+
+![](images/about-select.png)
+
+## Edit and commit
+
+:::{.r-stack}
+![](images/about-edit.png){.fragment}
+
+![](images/about-change-and-commit.png){.fragment}
+
+![](images/about-commit-message.png){.fragment}
+:::
+
+:::{.fragment}
+Once you press commit, the action will be triggered
+:::
+
+## GitHub Magic
+
+## To see the magic
+
+Return to main page
+
+![](images/navbar-code.png)
+
+And notice the wee yellow dot
+
+![](images/yellow-dot.png)
+
+You can click it (if you like)
+
+:::{.r-stack}
+![](images/checks-pending-1.png){.fragment}
+
+![](images/checks-pending-2.png){.fragment}
+
+![](images/checks-success.png){.fragment}
+:::
+
+You now have a website!!
+
+## Find your URL
+
+:::{.columns}
+:::{.column .fragment}
+![](images/about-description-cog.png)
+:::
+
+:::{.column .fragment}
+![](images/about-description-url.png)
+:::
+:::
+
+# RStudio project
+
+# Make changes locally
+
+
