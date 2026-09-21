@@ -67,14 +67,14 @@ After completing this step, your website deployment will be configured
 :::{.columns}
 :::{.column .fragment}
 
-- We have another workshop that shows this...
+- We have another workshop that shows deploying from a branch...
 
 ![](images/deploy-from-branch.png)
 :::
 
 :::{.column .fragment}
 
-- But the better approach is this...
+- But today we will use a simpler approach (GitHub action)...
 
 ![](images/deploy-from-actions.png)
 :::
@@ -117,10 +117,11 @@ And notice the wee yellow dot
 
 ![](images/yellow-dot.png)
 
-You can click it (if you like)
+Click it (or choose Actions in the menu) to see the progress:
+
 
 :::{.r-stack}
-![](images/checks-pending-1.png){.fragment}
+![](images/checks-pending-1.png){}
 
 ![](images/checks-pending-2.png){.fragment}
 
