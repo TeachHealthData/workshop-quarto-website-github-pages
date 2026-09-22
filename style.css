@@ -1,0 +1,50 @@
+.slide-background-content {
+    background-color: #fafac8;
+}
+
+section.section-intro {
+  background-color: #041e42;
+}
+
+h2 {
+  border-bottom: 4px solid #d50032;
+}
+
+section.section-intro h2 {
+  color: #fafac8;
+  font-size: 2.4em;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+a.uri {
+  color: #004f71;
+  text-decoration: underline;
+}
+
+a.uri:hover {
+  color: #ad033b;
+}
+
+
+li::marker {
+  color: #d50032;
+}
+
+.highlight-tip {
+  background-color: #f9a8003f;
+  border-left: 4px solid #f9a800;
+  padding: 0.4em 0.8em;
+  border-radius: 0 4px 4px 0;
+  color: #041e42;
+}
+
+.highlight-success {
+  background-color: #61bf1a2d;
+  border-left: 4px solid #61bf1a;
+  padding: 0.4em 0.8em;
+  border-radius: 0 4px 4px 0;
+  color: #154734;
+  font-weight: 600;
+}
+
