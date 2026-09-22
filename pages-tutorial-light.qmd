@@ -35,7 +35,7 @@ Find the Template repo for creating skills/experience portfolio at:
 
 <https://github.com/TeachHealthData/workshop-portfolio-template>
 
-![](images/new-repo-from-template.png)
+![](images/new-repo-from-template.png){width=100%}
 
 Find and click the green "Use this template" button
 
@@ -61,7 +61,7 @@ Find and click the green "Use this template" button
 
 - Don't hide your skills!
 
-![](images/make-public.png)
+![](images/make-public.png){width=100%}
 
 
 ## Don't delegate this to AI
@@ -70,7 +70,7 @@ Find and click the green "Use this template" button
 May break stuff!
 :::
 
-![](images/skip-copilot.png)
+![](images/skip-copilot.png){width=100%}
 
 Copilot may add extra files that interfere with the automated build process
 
@@ -79,7 +79,7 @@ Copilot may add extra files that interfere with the automated build process
 
 - Big green button
 
-![](images/create-repo-btn.png)
+![](images/create-repo-btn.png){width=100%}
 
 :::{.fragment .highlight-success}
 You now have your own website repository 👏
@@ -313,5 +313,4 @@ Go back to GitHub, and click the link you configured earlier
 :::{.highlight-tip}
 Give it a minute - the Action may still be running
 :::
-
 
