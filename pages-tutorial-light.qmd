@@ -1,13 +1,15 @@
-
 ---
-title: 'GitHub pages Portfolio setup'
+title: 'GitHub Pages Portfolio'
+subtitle: 'Quick Setup'
 format:
   revealjs:
+    fontsize: 2rem
     menu: false
     buttons: false
     auto-stretch: false
     css: style.css
 ---
+
 
 ## Before we start
 
@@ -24,7 +26,7 @@ format:
 - Push local changes to trigger another build
 
 
-## Create repo {.section-intro}
+## Get Starter Template {.section-intro}
 
 ![](images/GitHub_Invertocat_White.png){width=45% fig-align='center'}
 
@@ -37,7 +39,9 @@ Find the Template repo for creating skills/experience portfolio at:
 
 ![](images/new-repo-from-template.png){width=100%}
 
-Find and click the green "Use this template" button
+
+Find and click the [Use this template]{.big-green-button} button
+
 
 
 ## Name your repo 
@@ -45,13 +49,13 @@ Find and click the green "Use this template" button
 - The name you choose will be your final website URL  
 
 :::{.highlight-tip}
-[your-username.github.io/[repo-name]{style='color: green; font-weight: bold;'}]{style='font-family: monospace;'}
+[your-username.github.io/[repo-name]{style='color: #2e9a40; font-weight: bold;'}]{style='font-family: monospace;'}
 :::
 
 - So choose something appropriately professional
 
 :::{.r-stack}
-![](images/name-repo-1.png){.fragment}
+![](images/name-repo-1.png)
 
 ![](images/name-repo-2.png){.fragment}
 :::
@@ -88,24 +92,24 @@ You now have your own website repository 👏
 
 ## What's in the template?
 
-- `.qmd` files — your pages, written in Markdown
-- `_quarto.yml` — site configuration
-- `.github/workflows/` — the Actions workflow that builds and publishes your site
+- `.qmd` files: your pages, written in Markdown
+- `_quarto.yml`: site configuration
+- `.github/workflows/`: the Actions workflow that builds and publishes your site
 
-:::{.highlight-tip}
+:::{.highlight-success}
 GitHub Actions will handle everything automatically on every push
 :::
 
 
-## Prepare for deployment {.section-intro}
+## Tell GitHub How to Publish {.section-intro}
 
 
-## Change `Pages` settings {.scrollable}
+## Change `Pages` settings {#scroller .scrollable}
 
 Find the `Settings` tab in the main nav bar
 
 :::{.r-stack}
-![](images/navbar.png){.fragment}
+![](images/navbar.png)
 
 ![](images/navbar-settings.png){.fragment}
 :::
@@ -113,6 +117,8 @@ Find the `Settings` tab in the main nav bar
 :::{.columns .fragment}
 :::{.column}
 Now scan down the sidebar till you see `Pages`
+
+![](images/down-arrow.png){.flat .absolute top=620 right=120 width=5%}
 :::
 
 :::{.column}
@@ -121,32 +127,29 @@ Now scan down the sidebar till you see `Pages`
 :::
 
 
-## Deploy with GitHub Actions
+## Choose the publish method
 
 After completing this step, your website deployment will be configured
 
 :::{.columns}
-:::{.column .fragment width='40%'}
+:::{.column width='40%'}
 
 - This is the default
 
 ![](images/deploy-from-branch.png)
 :::
 
-:::{.fragment}
 
-
-:::{.column width='40%'}
+:::{.column .fragment width='40%'}
 
 - Automated build
 
 ![](images/deploy-from-actions.png)
 :::
 :::
-:::
 
 
-## Make changes {.section-intro}
+## Make changes online {.section-intro}
 
 
 ## Where's our website...?
@@ -169,7 +172,7 @@ Let's update our `About` page
 :::
 
 :::{.fragment .highlight-success}
-Commit -> Automatic build process triggered 🙌
+Commit (save) -> Automatic build process triggered 🙌
 :::
 
 
@@ -179,7 +182,7 @@ Commit -> Automatic build process triggered 🙌
 
 ## To see the magic
 
-Return to `main` page
+Return to `main` page (if your not already there)
 
 ![](images/navbar-code.png)
 
@@ -214,7 +217,7 @@ You now have a website!! 🎉
 :::
 
 
-## Find your URL
+## Find your website address
 
 - Once the Action is complete you will have a website
 - But where is it?
@@ -229,11 +232,15 @@ Right hand side
 :::{.column .fragment}
 ![](images/about-description-url.png)
 :::
+
+:::{.fragment .highlight-tip .absolute top=500}
+__Bookmark this__
+
+...it's your portfolio URL to share
+:::
 :::
 
-:::{.fragment .highlight-tip}
-Bookmark this — it's your portfolio URL to share
-:::
+
 
 
 ## New project {.section-intro}
@@ -243,7 +250,7 @@ Bookmark this — it's your portfolio URL to share
 :::
 
 
-## Create with Git enabled
+## Activate Git interface
 
 - We can create a new project directly from a Git repo
 
@@ -266,9 +273,10 @@ Bookmark this — it's your portfolio URL to share
 :::
 
 
-## Add `clone` url
+## Help RStudio find your repo
 
-Copy your repo's URL form your browser address bar
+- Copy your repo's URL from your __browser__ address bar
+- Add `clone` url
 
 :::{.r-stack}
 ![](images/repo-url.png)
