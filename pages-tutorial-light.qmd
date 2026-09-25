@@ -1,0 +1,324 @@
+---
+title: 'GitHub Pages Portfolio'
+subtitle: 'Quick Setup'
+format:
+  revealjs:
+    fontsize: 2rem
+    menu: false
+    buttons: false
+    auto-stretch: false
+    css: style.css
+---
+
+
+## Before we start
+
+- GitHub account
+- R + RStudio installed
+
+
+## Plan for today
+
+- Create a repo from a __template__
+- Configure __automatic deployment__
+- Make your first edit to __trigger a build__
+- Copy locally 
+- Push local changes to trigger another build
+
+
+## Get Starter Template {.section-intro}
+
+![](images/GitHub_Invertocat_White.png){width=45% fig-align='center'}
+
+
+## Copy the template
+
+Find the Template repo for creating skills/experience portfolio at:
+
+<https://github.com/TeachHealthData/workshop-portfolio-template>
+
+![](images/new-repo-from-template.png){width=100%}
+
+
+Find and click the [Use this template]{.big-green-button} button
+
+
+
+## Name your repo 
+
+- The name you choose will be your final website URL  
+
+:::{.highlight-tip}
+[your-username.github.io/[repo-name]{style='color: #2e9a40; font-weight: bold;'}]{style='font-family: monospace;'}
+:::
+
+- So choose something appropriately professional
+
+:::{.r-stack}
+![](images/name-repo-1.png)
+
+![](images/name-repo-2.png){.fragment}
+:::
+
+
+## Make it public
+
+- Don't hide your skills!
+
+![](images/make-public.png){width=100%}
+
+
+## Don't delegate this to AI
+
+:::{.highlight-tip}
+May break stuff!
+:::
+
+![](images/skip-copilot.png){width=100%}
+
+Copilot may add extra files that interfere with the automated build process
+
+
+## Now we create the repo
+
+- Big green button
+
+![](images/create-repo-btn.png){width=100%}
+
+:::{.fragment .highlight-success}
+You now have your own website repository 👏
+:::
+
+
+## What's in the template?
+
+- `.qmd` files: your pages, written in Markdown
+- `_quarto.yml`: site configuration
+- `.github/workflows/`: the Actions workflow that builds and publishes your site
+
+:::{.highlight-success}
+GitHub Actions will handle everything automatically on every push
+:::
+
+
+## Tell GitHub How to Publish {.section-intro}
+
+
+## Change `Pages` settings {#scroller .scrollable}
+
+Find the `Settings` tab in the main nav bar
+
+:::{.r-stack}
+![](images/navbar.png)
+
+![](images/navbar-settings.png){.fragment}
+:::
+
+:::{.columns .fragment}
+:::{.column}
+Now scan down the sidebar till you see `Pages`
+
+![](images/down-arrow.png){.flat .absolute top=620 right=120 width=5%}
+:::
+
+:::{.column}
+![](images/sidebar-pages.png)
+:::
+:::
+
+
+## Choose the publish method
+
+After completing this step, your website deployment will be configured
+
+:::{.columns}
+:::{.column width='40%'}
+
+- This is the default
+
+![](images/deploy-from-branch.png)
+:::
+
+
+:::{.column .fragment width='40%'}
+
+- Automated build
+
+![](images/deploy-from-actions.png)
+:::
+:::
+
+
+## Make changes online {.section-intro}
+
+
+## Where's our website...?
+
+In order to __trigger__ the `Build Actions` we have to make a change to our content
+
+Let's update our `About` page
+
+![](images/about-select.png)
+
+
+## Edit and commit
+
+:::{.r-stack}
+![](images/about-edit.png){.fragment}
+
+![](images/about-change-and-commit.png){.fragment}
+
+![](images/about-commit-message.png){.fragment}
+:::
+
+:::{.fragment .highlight-success}
+Commit (save) -> Automatic build process triggered 🙌
+:::
+
+
+## GitHub Magic {.section-intro}
+
+![](images/actions-workflow.png){width='80%' fig-align=center}
+
+## To see the magic
+
+Return to `main` page (if your not already there)
+
+![](images/navbar-code.png)
+
+:::{.columns .fragment}
+:::{.column}
+And notice the wee yellow dot
+:::
+
+:::{.column}
+![](images/yellow-dot.png)
+:::
+:::
+
+:::{.columns .fragment}
+:::{.column}
+You can click it...
+:::
+
+:::{.column}
+:::{.r-stack}
+![](images/checks-pending-1.png)
+
+![](images/checks-pending-2.png){.fragment}
+
+![](images/checks-success.png){.fragment}
+:::
+:::
+:::
+
+:::{.fragment .highlight-success}
+You now have a website!! 🎉
+:::
+
+
+## Find your website address
+
+- Once the Action is complete you will have a website
+- But where is it?
+
+:::{.columns}
+:::{.column .fragment}
+Right hand side
+
+![](images/about-description-cog.png)
+:::
+
+:::{.column .fragment}
+![](images/about-description-url.png)
+:::
+
+:::{.fragment .highlight-tip .absolute top=500}
+__Bookmark this__
+
+...it's your portfolio URL to share
+:::
+:::
+
+
+
+
+## New project {.section-intro}
+
+:::{div}
+![](images/rslogo.png){width=80% fig-align="center"}
+:::
+
+
+## Activate Git interface
+
+- We can create a new project directly from a Git repo
+
+:::{.columns}
+:::{.column .fragment}
+
+- Choose __Create Project__ from __Version Control__
+
+![](images/rstudio-proj-vc.png)
+:::
+
+:::{.column .fragment}
+
+- Select the Git option
+</br>
+</br>
+
+![](images/rstudio-proj-git.png)
+:::
+:::
+
+
+## Help RStudio find your repo
+
+- Copy your repo's URL from your __browser__ address bar
+- Add `clone` url
+
+:::{.r-stack}
+![](images/repo-url.png)
+
+![](images/rstudio-repo-url-1.png){.fragment}
+
+![](images/rstudio-repo-url-2.png){.fragment}
+:::
+
+
+## Make changes locally {.section-intro}
+
+
+## Edit your About page
+
+![](images/rstudio-change-about.png)
+
+
+## Commit and push 
+
+:::{.r-stack}
+![](images/rstudio-commit-changes-1.png){.fragment}
+
+![](images/rstudio-commit-changes-2.png){.fragment}
+
+![](images/rstudio-push.png){.fragment}
+:::
+
+:::{.fragment .highlight-success}
+When you click `Push` the "Build Pages" action is triggered 🎊
+:::
+
+
+## Go check it out...
+
+- A live portfolio website at `your-username.github.io/repo-name`
+- Automatic rebuilds on every push
+- A local development workflow in RStudio
+
+Go back to GitHub, and click the link you configured earlier
+
+:::{.highlight-tip}
+Give it a minute - the Action may still be running
+:::
+
