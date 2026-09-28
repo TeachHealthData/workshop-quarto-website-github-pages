@@ -1,0 +1,87 @@
+body { font-size: 8pt; }
+
+.slide-background-content {
+    background-color: #fafac8;
+}
+
+section.section-intro {
+  background-color: #041e42;
+}
+
+h2 {
+  border-bottom: 4px solid #d50032;
+}
+
+section.section-intro h2 {
+  color: #fafac8;
+  font-size: 2.4em;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+a.uri {
+  color: #004f71;
+  text-decoration: underline;
+}
+
+a.uri:hover {
+  color: #ad033b;
+}
+
+
+li::marker {
+  color: #d50032;
+}
+
+img {
+  background: rgba(250, 250, 200, 0.4);
+  box-shadow: 0 4px 18px;
+  border-radius: 4px;
+}
+
+section.section-intro img {
+  background: transparent;
+}
+
+img.flat {
+  box-shadow: none;
+  background: none;
+}
+
+.highlight-tip {
+  background-color: #f9a8003f;
+  border-left: 4px solid #f9a800;
+  padding: 0.4em 0.8em;
+  border-radius: 0 4px 4px 0;
+  color: #041e42;
+}
+
+.highlight-success {
+  background-color: #61bf1a2d;
+  border-left: 4px solid #61bf1a;
+  padding: 0.4em 0.8em;
+  border-radius: 0 4px 4px 0;
+  color: #154734;
+  font-weight: 600;
+}
+
+.reveal .columns {
+  display: flex;
+  gap: 1em;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.reveal .columns .column {
+/*  min-width: 0;   /* prevent flex overflow; width comes from Quarto's inline style */
+  padding: 0 0.6em;
+}
+
+.big-green-button {
+  background-color: #2e9a40;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 2rem;
+  padding: 4px 10px;
+}

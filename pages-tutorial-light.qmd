@@ -1,0 +1,459 @@
+---
+title: 'GitHub Pages Portfolio'
+subtitle: 'Quick Setup'
+format:
+  revealjs:
+    fontsize: 2rem
+    menu: false
+    buttons: false
+    auto-stretch: false
+    css: style.css
+    scrollable: true
+---
+
+
+## Before we start
+
+- GitHub account
+- R + RStudio installed
+
+
+## Plan for today
+
+- Create a repo from a __template__
+- Configure __automatic deployment__
+- Make your first edit to __trigger a build__
+- Copy locally 
+- Push local changes to trigger another build
+
+
+## Get Starter Template {.section-intro}
+
+![](images/GitHub_Invertocat_White.png){width=45% fig-align='center'}
+
+
+## Copy the template
+
+Find the Template repo for creating skills/experience portfolio at:
+
+<https://github.com/TeachHealthData/workshop-portfolio-template>
+
+![](images/new-repo-from-template.png){width=100%}
+
+
+Find and click the [Use this template]{.big-green-button} button
+
+
+
+## Name your repo 
+
+- The name you choose will be your final website URL  
+
+:::{.highlight-tip}
+[your-username.github.io/[repo-name]{style='color: #2e9a40; font-weight: bold;'}]{style='font-family: monospace;'}
+:::
+
+- So choose something appropriately professional
+
+:::{.r-stack}
+![](images/name-repo-1.png)
+
+![](images/name-repo-2.png){.fragment}
+:::
+
+
+## Make it public
+
+- Don't hide your skills!
+
+![](images/make-public.png){width=100%}
+
+
+## Don't delegate this to AI
+
+:::{.highlight-tip}
+May break stuff!
+:::
+
+![](images/skip-copilot.png){width=100%}
+
+Copilot may add extra files that interfere with the automated build process
+
+
+## Now we create the repo
+
+- Big green button
+
+![](images/create-repo-btn.png){width=100%}
+
+:::{.fragment .highlight-success}
+You now have your own website repository 👏
+:::
+
+
+## What's in the template?
+
+- `.qmd` files: your pages, written in Markdown
+- `_quarto.yml`: site configuration
+- `.github/workflows/`: the Actions workflow that builds and publishes your site
+
+:::{.highlight-success}
+GitHub Actions will handle everything automatically on every push
+:::
+
+
+## Tell GitHub How to Publish {.section-intro}
+
+
+## Change `Pages` settings {#scroller .scrollable}
+
+Find the `Settings` tab in the main nav bar
+
+:::{.r-stack}
+![](images/navbar.png)
+
+![](images/navbar-settings.png){.fragment}
+:::
+
+:::{.columns .fragment}
+:::{.column}
+Now scan down the sidebar till you see `Pages`
+
+![](images/down-arrow.png){.flat .absolute top=620 right=120 width=5%}
+:::
+
+:::{.column}
+![](images/sidebar-pages.png)
+:::
+:::
+
+
+## Choose the publish method
+
+This is the last setup step: now all changes to your code will be deployment (published) to the web.
+
+Where are two ways to deploy:
+
+:::{.columns}
+:::{.column width='40%'}
+**Actions:** you specifically program what should happen when new code is pushed. We've set it up for you already in the starting code for this workshop **[Choose this]**
+
+![](images/deploy-from-actions.png)
+:::
+
+:::{.column .fragment width='40%'}
+**Branches:** This gives you less control, but could be simpler to set up, if you're working without a template in the future.
+
+![](images/deploy-from-branch.png)
+:::
+:::
+
+
+## Make changes online {.section-intro}
+
+
+## Where's our website...?
+
+In order to __trigger__ the `Build Actions` we have to make a change to our content
+
+Let's update our `About` page
+
+![](images/about-select.png)
+
+## Edit and commit
+
+//TODO: remake these images, so they are not so wide
+//TODO: add some explanation of what the image is about, e.g. 'click this to do this'
+
+:::{.r-stack}
+:::{.fragment .current-visible}
+//TODO explanation text 1
+![](images/about-edit.png)
+:::
+:::{.fragment .current-visible}
+//TODO explanation text 2
+![](images/about-change-and-commit.png)
+:::
+:::{.fragment .current-visible}
+//TODO explanation text 3
+![](images/about-commit-message.png)
+:::
+:::
+
+:::{.fragment .highlight-success}
+Commit (save) -> Automatic build process triggered 🙌
+:::
+
+
+## GitHub Magic {.section-intro}
+
+![](images/actions-workflow.png){width='80%' fig-align=center}
+
+## To see the magic
+
+Return to `main` page (if your not already there)
+
+![](images/navbar-code.png)
+
+:::{.columns .fragment}
+:::{.column}
+And notice the wee yellow dot
+:::
+
+:::{.column}
+![](images/yellow-dot.png)
+:::
+:::
+
+:::{.columns .fragment}
+:::{.column}
+You can click it...
+:::
+
+:::{.column}
+:::{.r-stack}
+![](images/checks-pending-1.png)
+
+![](images/checks-pending-2.png){.fragment}
+
+![](images/checks-success.png){.fragment}
+:::
+:::
+:::
+
+:::{.fragment .highlight-success}
+You now have a website!! 🎉
+:::
+
+
+## Find your website address
+
+- Once the Action is complete you will have a website
+- But where is it?
+
+:::{.columns}
+:::{.column .fragment}
+Right hand side
+
+![](images/about-description-cog.png)
+:::
+
+:::{.column .fragment}
+![](images/about-description-url.png)
+:::
+
+:::{.fragment .highlight-tip .absolute top=500}
+__Bookmark this__
+
+...it's your portfolio URL to share
+:::
+:::
+
+## Congratulations, your website is all setup!
+
+### Great work, so far:
+
+- you have created your quarto website. Code for it lives on GitHub.
+- you have set up the deployment/publishing. Whenever you make change in quarto code, your updated goes live on the internet automatically.
+- you have seen it work. You used the simple code editor on GitHub website to make a change, and watched that changebe published.
+
+### Next we will set up up your RStudio, so that:
+
+- you have a live preview of how your website will look even before you publish it
+- you have more suitable tools for editing and adding files
+
+
+## Setting up your RStudio {.section-intro}
+
+:::{div}
+![](images/rslogo.png){width=80% fig-align="center"}
+:::
+
+## How to connect your GitHub account with your RStudio  
+
+:::{.highlight-tip}
+If you've done this before on (e.g. on another workshop) you can skip next few slides. In that case jump to the step where we Copy/Clone the repository.
+:::
+
+This next set of steps is least pleasant in the whole workshop, but don't worry, it will be over soon.
+
+- create a special **'token'** on GitHub page which will allows RStudio to make changes to repository
+- put this token into your Rstudio, so that it remembers it for the next time.
+
+Follow steps below to get these things done quickly...
+
+## To create the GitHub Token
+
+Run this code in RStudio Console. It will open a very specific part of the GitHub where you will be able to request your token.  
+
+```
+install.packages(c('usethis', 'gitcreds'))
+usethis::create_github_token()
+gitcreds::gitcreds_set()
+```
+When you run it in your RStudio console, two things will happen:
+
+- a specific section of GitHub website will open. We'll start with that.
+- your console will ask you for some stuff. We'll come back to this in a minute.
+
+You will see something like this in console, and immediately a website will open...
+
+![](images/rstudio-generate-pat.png)
+
+## A section of GitHub website will open:
+
+### Enter required details to create your Token
+
+Scroll down to see all options, and when done, click [Generate Token]{.big-green-button} at the bottom
+
+![](images/github-create-pat.png)
+
+## You will now see your token. Copy it.
+
+### Don't close this page for now!!! (You'll never see it again)
+
+- Token is a long string which looks like `ghp_BLABLABLAH`
+- Click the copy icon next to the token. We will paste it into RStudio next.
+- Then come back to RStudio
+
+![](images/github-copy-pat.png)
+
+## In RStudio we will paste the Token 
+
+### First select from options, and when asked paste the token
+
+Depending on if you've done this before you will have an option to:
+
+- 1: **Keep** existing credentials (Tokens)
+- 2: **Replace** Previous Credentials **[You'll likely choose this]**
+- 3: **See** your previous Credentials
+
+![](images/rstudio-replace-options-pat.png)
+
+## Then (finally!) you'll be asked to paste your Token.
+
+![](images/rstudio-paste-pat.png)
+Once this is done, we can contine on our fun adventure or creating a website.
+
+## Create a local copy/clone of your website
+
+In RStudio, we can create a new project directly from our Git repo
+
+:::{.columns}
+:::{.column }
+
+- Choose __Create Project__ from __Version Control__
+
+![](images/rstudio-proj-vc.png)
+:::
+
+:::{.column .fragment}
+
+- Select the Git option
+</br>
+</br>
+
+![](images/rstudio-proj-git.png)
+:::
+:::
+
+
+## Help RStudio find your repo
+
+First get the 'official' url of your websote
+
+- On the GitHub age of your repositority click CODE button
+- Choose Local \ HTTPS and click the copy icon
+
+
+
+Then add it to the RStudio (so that it knows where to copy things from)
+
+//TODO: add annotations to first image
+
+:::{.r-stack}
+![](images/repo-url-code-button.png)
+
+![](images/rstudio-repo-url-1.png){.fragment}
+
+![](images/rstudio-repo-url-2.png){.fragment}
+:::
+
+
+## Make changes locally {.section-intro}
+
+
+## Edit your About page
+
+![](images/rstudio-change-about.png)
+
+
+## Commit and push 
+
+:::{.r-stack}
+![](images/rstudio-commit-changes-1.png){.fragment}
+
+![](images/rstudio-commit-changes-2.png){.fragment}
+
+![](images/rstudio-push.png){.fragment}
+:::
+
+:::{.fragment .highlight-success}
+When you click `Push` the "Build Pages" action is triggered 🎊
+:::
+
+
+## Go check it out...
+
+- A live portfolio website at `your-username.github.io/repo-name`
+- Automatic rebuilds on every push
+- A local development workflow in RStudio
+
+Go back to GitHub, and click the link you configured earlier
+
+:::{.highlight-tip}
+Give it a minute - the Action may still be running
+:::
+
+## You are all set up now! 
+
+### In the previous steps you've:
+
+- set up your page
+- made a small change to your page
+- you have see your change go live.
+
+### Coming Next: Making your own portfolio
+
+- add you pictures
+- add description about yourself
+- use markdown to make it prettier and readable
+
+## Time to make your own portfolio (your turn)
+
+Before you start clicking and typing, take a minute, with pen and paper, to think...
+
+### How would you like your portfolio to look like?
+
+- What should be in it? (make a list)
+- Who do you want to come across as? (think of your audience)
+- What's the **simplest**[^1] thing that would be enough?
+
+[^1]: Today we're making a simple 'leaflet' style website, like an extended business card. In the future workshops we will learn about more advanced 'website' features: menu, footer, table of contents, blog posts and blog lists. But today let's start small.
+
+
+## Where to start with your portfolio?
+
+This is the end of materials for this workshop. Now it is your turn. Working in very small steps try to make these changes to your portfolio:
+
+:::{.highlight-tip}
+After each change make a commit and push (so that you see it live and get in the habit of using git)
+:::
+
+1. Add your name and position **[then COMMIT and PUSH]**
+1. Add your profile photo on the main page **[then COMMIT and PUSH]**
+1. Add a list of links to where someone can find out more about you (email? LinkedIn? Social Media? Employer website?) **[then COMMIT and PUSH]**
+1. As a few very short paragraphs about things you took part in: work/study projects, press articles, noble winner nominations, etc.) **[then COMMIT and PUSH]**
+1. OK, now go back to things you created above and do some cleanup. Do some of them need links, or images, of headers? (Use multiple hash # symbols for first, second, third header)
+1. Add a short paragraph or a list of bullet-points about yourself. Who are you? Sort of like your 'elevator pitch'. This could go on the beginning. ("I am a Dental Nurse studying for an MSc in Data Science.")  **[then COMMIT and PUSH]**
+1. Start adding anything else which brings you joy and things you are proud of. Include images, links, etc  **[then COMMIT and PUSH]**
