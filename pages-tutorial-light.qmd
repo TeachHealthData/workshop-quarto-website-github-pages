@@ -131,22 +131,21 @@ Now scan down the sidebar till you see `Pages`
 
 ## Choose the publish method
 
-After completing this step, your website deployment will be configured
+This is the last setup step: now all changes to your code will be deployment (published) to the web.
+
+Where are two ways to deploy:
 
 :::{.columns}
 :::{.column width='40%'}
-
-- This is the default
-
-![](images/deploy-from-branch.png)
-:::
-
-
-:::{.column .fragment width='40%'}
-
-- Automated build
+**Actions:** you specifically program what should happen when new code is pushed. We've set it up for you already in the starting code for this workshop **[Choose this]**
 
 ![](images/deploy-from-actions.png)
+:::
+
+:::{.column .fragment width='40%'}
+**Branches:** This gives you less control, but could be simpler to set up, if you're working without a template in the future.
+
+![](images/deploy-from-branch.png)
 :::
 :::
 
