@@ -8,6 +8,8 @@ format:
     buttons: false
     auto-stretch: false
     css: style.css
+    scrollable: true
+    margin-bottom: 0px
 ---
 
 
@@ -322,3 +324,45 @@ Go back to GitHub, and click the link you configured earlier
 Give it a minute - the Action may still be running
 :::
 
+## You are all set up now! 
+
+### In the previous steps you've:
+
+- set up your page
+- made a small change to your page
+- you have see your change go live.
+
+### Coming Next: Making your own portfolio
+
+- add you pictures
+- add description about yourself
+- use markdown to make it prettier and readable
+
+## Time to make your own portfolio (your turn)
+
+Before you start clicking and typing, take a minute, with pen and paper, to think...
+
+### How would you like your portfolio to look like?
+
+- What should be in it? (make a list)
+- Who do you want to come across as? (think of your audience)
+- What's the **simplest**[^1] thing that would be enough?
+
+[^1]: Today we're making a simple 'leaflet' style website, like an extended business card. In the future workshops we will learn about more advanced 'website' features: menu, footer, table of contents, blog posts and blog lists. But today let's start small.
+
+
+## Where to start with your portfolio?
+
+This is the end of materials for this workshop. Now it is your turn. Working in very small steps try to make these changes to your portfolio:
+
+:::{.highlight-tip}
+After each change make a commit and push (so that you see it live and get in the habit of using git)
+:::
+
+1. Add your name and position **[then COMMIT and PUSH]**
+1. Add your profile photo on the main page **[then COMMIT and PUSH]**
+1. Add a list of links to where someone can find out more about you (email? LinkedIn? Social Media? Employer website?) **[then COMMIT and PUSH]**
+1. As a few very short paragraphs about things you took part in: work/study projects, press articles, noble winner nominations, etc.) **[then COMMIT and PUSH]**
+1. OK, now go back to things you created above and do some cleanup. Do some of them need links, or images, of headers? (Use multiple hash # symbols for first, second, third header)
+1. Add a short paragraph or a list of bullet-points about yourself. Who are you? Sort of like your 'elevator pitch'. This could go on the beginning. ("I am a Dental Nurse studying for an MSc in Data Science.")  **[then COMMIT and PUSH]**
+1. Start adding anything else which brings you joy and things you are proud of. Include images, links, etc  **[then COMMIT and PUSH]**
