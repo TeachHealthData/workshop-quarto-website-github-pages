@@ -241,22 +241,98 @@ __Bookmark this__
 :::
 :::
 
+## Congratulations, your website is all setup!
+
+### Great work, so far:
+
+- you have created your quarto website. Code for it lives on GitHub.
+- you have set up the deployment/publishing. Whenever you make change in quarto code, your updated goes live on the internet automatically.
+- you have seen it work. You used the simple code editor on GitHub website to make a change, and watched that changebe published.
+
+### Next we will set up up your RStudio, so that:
+
+- you have a live preview of how your website will look even before you publish it
+- you have more suitable tools for editing and adding files
 
 
-
-## New project {.section-intro}
+## Setting up your RStudio {.section-intro}
 
 :::{div}
 ![](images/rslogo.png){width=80% fig-align="center"}
 :::
 
+## How to connect your GitHub account with your RStudio  
 
-## Activate Git interface
+:::{.highlight-tip}
+If you've done this before on (e.g. on another workshop) you can skip next few slides. In that case jump to the step where we Copy/Clone the repository.
+:::
 
-- We can create a new project directly from a Git repo
+This next set of steps is least pleasant in the whole workshop, but don't worry, it will be over soon.
+
+- create a special **'token'** on GitHub page which will allows RStudio to make changes to repository
+- put this token into your Rstudio, so that it remembers it for the next time.
+
+Follow steps below to get these things done quickly...
+
+## To create the GitHub Token
+
+Run this code in RStudio Console. It will open a very specific part of the GitHub where you will be able to request your token.  
+
+```
+install.packages(c('usethis', 'gitcreds'))
+usethis::create_github_token()
+gitcreds::gitcreds_set()
+```
+When you run it in your RStudio console, two things will happen:
+
+- a specific section of GitHub website will open. We'll start with that.
+- your console will ask you for some stuff. We'll come back to this in a minute.
+
+You will see something like this in console, and immediately a website will open...
+
+![](images/rstudio-generate-pat.png)
+
+## A section of GitHub website will open:
+
+### Enter required details to create your Token
+
+Scroll down to see all options, and when done, click [Generate Token]{.big-green-button} at the bottom
+
+![](images/github-create-pat.png)
+
+## You will now see your token. Copy it.
+
+### Don't close this page for now!!! (You'll never see it again)
+
+- Token is a long string which looks like `ghp_BLABLABLAH`
+- Click the copy icon next to the token. We will paste it into RStudio next.
+- Then come back to RStudio
+
+![](images/github-copy-pat.png)
+
+## In RStudio we will paste the Token 
+
+### First select from options, and when asked paste the token
+
+Depending on if you've done this before you will have an option to:
+
+- 1: **Keep** existing credentials (Tokens)
+- 2: **Replace** Previous Credentials **[You'll likely choose this]**
+- 3: **See** your previous Credentials
+
+![](images/rstudio-replace-options-pat.png)
+
+## Then (finally!) you'll be asked to paste your Token.
+
+![](images/rstudio-paste-pat.png)
+Once this is done, we can contine on our fun adventure or creating a website.
+
+## Create a local copy/clone of your website
+
+In RStudio, we can create a new project directly from our Git repo
 
 :::{.columns}
-:::{.column .fragment}
+:::{.column }
 
 - Choose __Create Project__ from __Version Control__
 
