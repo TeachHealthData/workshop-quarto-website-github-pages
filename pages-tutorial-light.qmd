@@ -9,7 +9,6 @@ format:
     auto-stretch: false
     css: style.css
     scrollable: true
-    margin-bottom: 0px
 ---
 
 
@@ -352,11 +351,19 @@ In RStudio, we can create a new project directly from our Git repo
 
 ## Help RStudio find your repo
 
-- Copy your repo's URL from your __browser__ address bar
-- Add `clone` url
+First get the 'official' url of your websote
+
+- On the GitHub age of your repositority click CODE button
+- Choose Local \ HTTPS and click the copy icon
+
+
+
+Then add it to the RStudio (so that it knows where to copy things from)
+
+//TODO: add annotations to first image
 
 :::{.r-stack}
-![](images/repo-url.png)
+![](images/repo-url-code-button.png)
 
 ![](images/rstudio-repo-url-1.png){.fragment}
 
